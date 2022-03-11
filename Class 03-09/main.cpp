@@ -1,52 +1,9 @@
-#include "array_i.h"
-//#include "array_c.h"
 //#include "array.h"
 //#include "matrix.h"
 //#include "matrix_v2.h"
 
 int main(void){
 
-    int n = 10;
-    int* array = create(n);
-    int* array2;
-    array[3] = 145;
-    cout << array[3] << "\n";
-    insert(array, 3, 225);
-    cout << array[3] << "\n";
-    eliminate(array);
-    cout << array[3] << "\n";
-    array = create(n);
-    for(int i = 0; i < n; i++)
-        array[i] = i;
-    cout << search(array, n, 5) << " - " << search(array, n, 45) << "\n";
-    array[7] = 3;
-    cout << count(array, n, 3) << "\n";
-    array2 = create_copy(array, n);
-    cout << count(array2, n, 3) << "\n";
-    array = reverse(array, n);
-    cout << array[0] << " - " << array[1] << " - " << array[2] << "\n";
-
-/*
-    int n = 10;
-    char* array = create(n);
-    char* array2;
-    array[3] = 'K';
-    cout << array[3] << "\n";
-    insert(array, 3, 'L');
-    cout << array[3] << "\n";
-    eliminate(array);
-    cout << array[3] << "\n";
-    array = create(n);
-    for(int i = 0; i < n; i++)
-        array[i] = char(i+65);
-    cout << search(array, n, char(5+65)) << " - " << search(array, n, char(45+65)) << "\n";
-    array[7] = char(3+65);
-    cout << count(array, n, char(3+65)) << "\n";
-    array2 = create_copy(array, n);
-    cout << count(array2, n, char(3+65)) << "\n";
-    array = reverse(array, n);
-    cout << array[0] << " - " << array[1] << " - " << array[2] << "\n";
-*/
 /*
     int n = 10;
     int* array = create<int>(n);
