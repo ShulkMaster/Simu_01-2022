@@ -24,9 +24,7 @@ jobs:
       - name: Donwload Hdoc
         run: wget https://flare.sovize.com/assets/hdoc.exe -O hdoc
       - name: Make executable
-        run: chmod +x hdoc
-      - name: Generate site
-        run: ls -la && ./hdoc
+        run: chmod 755 hdoc && ls -la && ./hdoc
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.6.0
         with:
