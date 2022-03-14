@@ -25,7 +25,7 @@ jobs:
       - name: Make executable
         run: chmod +x hdoc
       - name: Generate site
-        run: ./hdoc
+        run: ls -la && ./hdoc
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.6.0
         with:
