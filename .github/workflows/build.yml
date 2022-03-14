@@ -21,7 +21,7 @@ jobs:
       - name: build
         run: cmake -DCMAKE_BUILD_TYPE=Debug -G Ninja ./ -B ./build
       - name: Donwload Hdoc
-        run: wget https://flare.sovize.com/assest/hdoc.exe -O hdoc
+        run: wget https://flare.sovize.com/assets/hdoc.exe -O hdoc
       - name: Make executable
         run: chmod +x hdoc
       - name: Generate site
