@@ -48,3 +48,5 @@ ipch/
 # Click-Once directory
 publish/*
 *.exe
+pages
+build

@@ -1,0 +1,11 @@
+[project]
+name = "Simulation"
+version = "1.0.0"
+git_repo_url = "https://github.com/ShulkMaster/Simu_01-2022/tree/feature/documentation/"
+
+[paths]
+compile_commands = "build/compile_commands.json"
+output_dir = "pages"
+
+[pages]
+homepage = "README.md"

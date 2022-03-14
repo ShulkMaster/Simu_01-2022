@@ -1,55 +1,40 @@
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
 
 using namespace std;
 
-/// @brief una cosa $x = y $ pero $x_{1} + x_{2} + \cdots + x_{n}$ donde
-/// $x \in A$
-/// @param size un parametro
-/// @return el elemento
-int* create(int size){
-    int* array = (int*) malloc(sizeof(int)*size);
-    return array;
-}
+/// @brief Crea un array de tamaño estatico en el heap
+/// Esta función retorna un _raw int *_ y por tanto debe ser manualmente liberada
+/// @param size cantidad maxima de elementos que contendra el array
+/// @return Arreglo de tamaño $n elementos
+int *create(int size);
 
-void insert(int* array, int pos, int value){
-    array[pos] = value;
-}
+/// @brief Inserta un elemento en una posición dada del arreglo
+/// @param array arreglo donde guardar el dato
+/// @param pos Posición donde guardar el arreglo
+/// $pos \in [0, size[
+/// @param value valor a insertar en el array
+void insert(int *array, int pos, int value);
 
-void eliminate(int* array){
-    free(array);
-}
+/// @brief Elimina el arreglo liberando la memoria
+/// @param array Arreglo a eliminar
+void eliminate(const int *array);
 
-bool search(int* array, int size, int value){
-    bool ans = false;
-    for(int i = 0; i < size; i++)
-        if(array[i] == value){
-            ans = true;
-            break;
-        }
-    return ans;
-}
 
-int count(int* array, int size, int value){
-    int cont = 0;
-    for(int i = 0; i < size; i++)
-        if(array[i] == value)
-            cont++;
-    return cont;
-}
+/// @brief Busca el elemento designado en el arreglo
+/// @param array Arreglo donde buscar el elemento
+/// @param size Número de elementos maximo que posee el arreglo
+/// @param value Valor a buscar en el arreglo
+/// @return Verdadero si el elemento existe al menos una vez, Falso en caso contrario
+bool contains(const int *array, int size, int value);
 
-int* create_copy(int* original, int size){
-    int* new_one = (int*) malloc(sizeof(int)*size);
-    for(int i = 0; i < size; i++)
-        new_one[i] = original[i];
-    return new_one;
-}
+/// @brief Cuenta las veces que un elemento _value_ se repite en el arreglo
+/// @param array Arreglo donde contar las ocurrencias de un valor
+/// @param size Tamaño maximo del arreglo
+/// @param value Valor cuyas ocurrencias serán contadas
+/// @return La cantidad de ocurrencias del elemento dentro del array
+int count(const int *array, int size, int value);
 
-int* reverse(int* array, int size){
-    int* array2 = (int*) malloc(sizeof(int)*size);
-    for (int i = size-1; i >= 0; i--){
-        array2[ size - (i + 1) ] = array[i];
-    }
-    eliminate(array);
-    return array2;
-}
+int *create_copy(int *original, int size);
+
+int *reverse(int *array, int size);
