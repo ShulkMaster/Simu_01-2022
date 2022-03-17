@@ -1,19 +1,22 @@
+/// @file
 #include <iostream>
 #include <cstdlib>
 
 using namespace std;
-
+///
 /// @brief Crea un array de tamaño estatico en el heap
-/// Esta función retorna un _raw int *_ y por tanto debe ser manualmente liberada
+/// Esta función retorna un raw int * y por tanto debe ser manualmente liberada
 /// @param size cantidad maxima de elementos que contendra el array
 /// @return Arreglo de tamaño $n elementos
+///
 int *create(int size);
 
-/// @brief Inserta un elemento en una posición dada del arreglo
-/// @param array arreglo donde guardar el dato
-/// @param pos Posición donde guardar el arreglo
-/// $pos \in [0, size[
-/// @param value valor a insertar en el array
+/** @brief Inserta un elemento en una posición dada del arreglo
+ * @param array arreglo donde guardar el dato
+ * @param pos Posición donde guardar el arreglo
+ * $pos \in [0, size[
+ * @param value valor a insertar en el array
+*/
 void insert(int *array, int pos, int value);
 
 /// @brief Elimina el arreglo liberando la memoria

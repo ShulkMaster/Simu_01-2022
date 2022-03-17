@@ -3,9 +3,15 @@
 
 using namespace std;
 
-template <typename type>
-type* create(int size){
-    type* array = (type*) malloc(sizeof(type)*size);
+/**
+ * Holly yisus cris
+ * @tparam T  asda
+ * @param size asd
+ * @return true
+ */
+template <typename T>
+T* create(int size){
+    T* array = (T*) malloc(sizeof(T)*size);
     return array;
 }
 
@@ -19,15 +25,13 @@ void eliminate(type* array){
     free(array);
 }
 
-template <typename type>
-bool search(type* array, int size, type value){
-    bool ans = false;
-    for(int i = 0; i < size; i++)
-        if(array[i] == value){
-            ans = true;
-            break;
+template<typename T>
+bool search(T *array, int size, T value) {
+    for (int i = 0; i < size; i++)
+        if (array[i] == value) {
+            return true;
         }
-    return ans;
+    return false;
 }
 
 template <typename type>

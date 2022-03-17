@@ -50,3 +50,4 @@ publish/*
 *.exe
 pages
 build
+doxygen-*
